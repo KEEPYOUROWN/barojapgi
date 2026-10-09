@@ -1,0 +1,556 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.svg"><title>바로잡기 | 서울·경기 입주 사전점검</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;800;900&family=IBM+Plex+Mono:wght@500;600&display=swap"></head><body><style>
+body{margin:0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+a{color:#1447C8}a:hover{color:#0B2E8A}
+input:focus,select:focus,button:focus-visible,a:focus-visible{outline:3px solid #1F5EFF;outline-offset:2px}
+</style>
+<div style="position: relative; font-family: 'Gothic A1', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: #0B1A2B; background: #FFFFFF; line-height: 1.6; word-break: keep-all">
+
+<div id="popup" style="position: absolute; inset: 0; z-index: 50; background: rgba(6, 16, 28, 0.8); display: flex; justify-content: center; align-items: flex-start; padding: 0 16px">
+<div role="dialog" aria-modal="true" aria-labelledby="popup-title" style="position: sticky; top: 72px; margin-top: 72px; width: 100%; max-width: 580px; background: #FFD21F; color: #0B1A2B; border: 5px solid #0B1A2B; border-radius: 20px; overflow: hidden; box-shadow: 0 0 0 6px #FFD21F, 0 30px 80px rgba(0, 0, 0, 0.6)">
+<div aria-hidden="true" style="height: 24px; background: repeating-linear-gradient(-45deg, #0B1A2B 0 18px, transparent 18px 36px)"></div>
+<div style="padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 18px; align-items: center; text-align: center">
+<div style="display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 12px">
+<span style="padding: 6px 14px; border-radius: 999px; background: #0B1A2B; color: #FFFFFF; font-size: 14px; font-weight: 800">서울·경기 입주 사전점검</span>
+<button type="button" data-close-popup aria-label="팝업 닫기" style="width: 44px; height: 44px; border: 2px solid #0B1A2B; border-radius: 50%; background: #FFFFFF; color: #0B1A2B; cursor: pointer; display: inline-flex; align-items: center; justify-content: center">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+</button>
+</div>
+<h2 id="popup-title" style="margin: 0; font-size: clamp(40px, 9vw, 68px); line-height: 1.08; font-weight: 900; letter-spacing: -0.03em">전국 최저가<br>보상제</h2>
+<p style="margin: 0; font-size: clamp(18px, 3.4vw, 22px); font-weight: 800; line-height: 1.4">더 싼 곳을 찾으셨나요?<br>견적서만 보여주세요.</p>
+<div style="width: 100%; background: #0B1A2B; color: #FFFFFF; border-radius: 14px; padding: 22px 20px; transform: rotate(-1.5deg)">
+<div style="font-size: 16px; font-weight: 700; color: #FFD21F">그 가격에서 무조건</div>
+<div style="font-size: clamp(34px, 8vw, 56px); line-height: 1.15; font-weight: 900; letter-spacing: -0.02em">1만원 더 낮게</div>
+</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600">30평대 249,000원 · 부가세 포함 정액</div>
+<a href="#apply" data-close-popup style="display: flex; align-items: center; justify-content: center; width: 100%; min-height: 60px; border-radius: 12px; background: #0B1A2B; color: #FFFFFF; text-decoration: none; font-size: 20px; font-weight: 900">최저가로 견적 받기</a>
+<p style="margin: 0; font-size: 13px; font-weight: 500; line-height: 1.5">같은 평형, 같은 점검 항목, 같은 장비 조건의 서면 견적서 기준입니다. 서울·경기 지역, 계약 전에 제시해 주셔야 적용됩니다.</p>
+<button type="button" data-close-popup style="min-height: 44px; padding: 0 16px; border: 0; background: none; color: #0B1A2B; font: inherit; font-size: 15px; font-weight: 700; text-decoration: underline; cursor: pointer">닫고 둘러보기</button>
+</div>
+</div>
+</div>
+
+
+<header style="position: sticky; top: 0; z-index: 10; background: #FFFFFF; border-bottom: 1px solid #E3E8EE">
+<div style="max-width: 1160px; margin: 0 auto; padding: 10px 24px 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2px 24px">
+<a href="#top" style="display: flex; align-items: center; gap: 10px; color: #0B1A2B; text-decoration: none; font-weight: 900; font-size: 20px; min-height: 44px">
+<span style="display: inline-flex; width: 32px; height: 32px; border-radius: 8px; align-items: center; justify-content: center; background: #FFD21F">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B1A2B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path><path d="M9 15l2 2 4-4"></path></svg>
+</span>
+바로잡기
+</a>
+<nav aria-label="주요 메뉴" style="order: 3; flex: 1 1 100%; display: flex; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 28px; font-size: 15px; font-weight: 700">
+<a href="#promise" style="color: #0B1A2B; text-decoration: none; padding: 10px 0">바로잡기의 약속</a>
+<a href="#items" style="color: #0B1A2B; text-decoration: none; padding: 10px 0">점검 항목</a>
+<a href="#process" style="color: #0B1A2B; text-decoration: none; padding: 10px 0">진행 과정</a>
+<a href="#price" style="color: #0B1A2B; text-decoration: none; padding: 10px 0">비용</a>
+<a href="#faq" style="color: #0B1A2B; text-decoration: none; padding: 10px 0">자주 묻는 질문</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 16px">
+<a href="tel:01071505238" style="display: flex; align-items: center; gap: 6px; color: #0B1A2B; text-decoration: none; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 16px; min-height: 44px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg>
+010-7150-5238
+</a>
+<a href="#apply" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 8px; background: #FFD21F; color: #0B1A2B; text-decoration: none; font-weight: 800; font-size: 15px">무료 견적 받기</a>
+</div>
+</div>
+</header>
+
+<section id="top" style="background: #0B1A2B; color: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 40px 24px 64px; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px 48px">
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; letter-spacing: 0.04em; color: #FFD21F">서울·경기 전역 신축 아파트 입주 사전점검 대행</div>
+<h1 style="margin: 0; font-size: clamp(34px, 5vw, 58px); line-height: 1.18; font-weight: 900; letter-spacing: -0.02em">합리적인 가격,<br>타협 없는 점검</h1>
+<p style="margin: 0; font-size: clamp(16px, 1.6vw, 19px); color: #C5CFDB; max-width: 560px">교육받은 직속 점검원이 전문 장비로 실제 하자를 찾아냅니다.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 16px; font-weight: 500">
+<li style="display: flex; gap: 10px; align-items: flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD21F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M5 12l5 5 9-10"></path></svg>일용직·파견 없이 전원 직속 점검원</li>
+<li style="display: flex; gap: 10px; align-items: flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD21F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M5 12l5 5 9-10"></path></svg>열화상·레이저 레벨기·라돈 측정 전문 장비</li>
+<li style="display: flex; gap: 10px; align-items: flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD21F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M5 12l5 5 9-10"></path></svg>국토교통부 가이드라인 준수</li>
+</ul>
+</div>
+<div style="order: 3; flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 16px 40px; padding-top: 24px; border-top: 1px solid #2A3B50">
+<div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600">100% 직속</div><div style="font-size: 14px; color: #A9B4C2">일용직·파견 없는 점검 인력</div></div>
+<div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600">50건+</div><div style="font-size: 14px; color: #A9B4C2">2020년부터 누적 점검</div></div>
+<div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600">24시간</div><div style="font-size: 14px; color: #A9B4C2">점검 후 보고서 전달</div></div>
+</div>
+
+<div id="apply" style="flex: 1 1 380px; max-width: 480px; min-width: 0; background: #FFFFFF; color: #0B1A2B; border-radius: 16px; padding: 32px; scroll-margin-top: 128px">
+<form id="lead-form" style="display: flex; flex-direction: column; gap: 16px">
+<div>
+<h2 style="margin: 0 0 4px; font-size: 24px; font-weight: 900">1분 무료 견적 신청</h2>
+<p style="margin: 0; font-size: 14px; color: #55616F">상담 시간 기준 30분 안에 연락드립니다.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-apt" style="font-size: 14px; font-weight: 700">아파트 단지명</label>
+<input id="f-apt" name="apt" type="text" required placeholder="예: OO자이 101동" style="height: 48px; padding: 0 14px; border: 1px solid #8A96A5; border-radius: 8px; font: inherit; font-size: 16px; width: 100%">
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px">
+<label for="f-size" style="font-size: 14px; font-weight: 700">평형</label>
+<select id="f-size" name="size" required style="height: 48px; padding: 0 10px; border: 1px solid #8A96A5; border-radius: 8px; font: inherit; font-size: 16px; background: #FFFFFF; width: 100%">
+<option value="">선택</option>
+<option>20평대 이하</option>
+<option>30평대</option>
+<option>40평대</option>
+<option>50평 이상</option>
+</select>
+</div>
+<div style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px">
+<label for="f-date" style="font-size: 14px; font-weight: 700">사전점검 예정일</label>
+<input id="f-date" name="date" type="date" style="height: 48px; padding: 0 10px; border: 1px solid #8A96A5; border-radius: 8px; font: inherit; font-size: 16px; width: 100%">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-phone" style="font-size: 14px; font-weight: 700">연락처</label>
+<input id="f-phone" name="phone" type="tel" required placeholder="010-0000-0000" style="height: 48px; padding: 0 14px; border: 1px solid #8A96A5; border-radius: 8px; font: inherit; font-size: 16px; width: 100%">
+</div>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: #55616F; min-height: 44px">
+<input type="checkbox" required style="width: 20px; height: 20px; margin: 2px 0 0; flex: none">
+<span>상담을 위한 개인정보 수집·이용에 동의합니다. <a href="#privacy-policy">자세히 보기</a></span>
+</label>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+<p id="lead-error" role="alert" style="display: none; margin: 0; font-size: 14px; font-weight: 700; color: #B42318">전송에 실패했습니다. 잠시 후 다시 시도하시거나 010-7150-5238로 연락해 주세요.</p>
+<button type="submit" style="height: 56px; border: 0; border-radius: 10px; background: #FFD21F; color: #0B1A2B; font: inherit; font-size: 18px; font-weight: 900; cursor: pointer">무료 견적 받기</button>
+<a href="sms:01071505238" style="display: flex; align-items: center; justify-content: center; min-height: 48px; border: 1px solid #0B1A2B; border-radius: 10px; color: #0B1A2B; text-decoration: none; font-weight: 800; font-size: 16px">문자로 바로 상담</a>
+</form>
+
+<div id="lead-done" role="status" style="display: none; flex-direction: column; gap: 16px; align-items: flex-start; padding: 24px 0">
+<span style="display: inline-flex; width: 56px; height: 56px; border-radius: 50%; align-items: center; justify-content: center; background: #FFD21F">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0B1A2B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>
+</span>
+<h2 style="margin: 0; font-size: 24px; font-weight: 900">신청이 접수되었습니다</h2>
+<p style="margin: 0; font-size: 16px; color: #55616F">상담 시간 기준 30분 안에 남겨주신 연락처로 견적과 예약 가능 일정을 안내해 드리겠습니다.</p>
+<button type="button" data-reset style="min-height: 44px; padding: 0 18px; border: 1px solid #0B1A2B; border-radius: 8px; background: #FFFFFF; color: #0B1A2B; font: inherit; font-weight: 700; cursor: pointer">다시 작성하기</button>
+</div>
+
+</div>
+</div>
+</section>
+
+<section style="background: #F3F5F8">
+<div style="max-width: 1160px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="max-width: 720px">
+<h2 style="margin: 0 0 12px; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.25; font-weight: 900; letter-spacing: -0.02em">직접 가서 봐도, 놓치는 이유가 있습니다</h2>
+<p style="margin: 0; font-size: 17px; color: #55616F">사전점검은 정해진 날짜, 제한된 시간 안에 끝내야 합니다. 처음 보는 집에서 무엇을 어떻게 봐야 할지 모르면 벽지 얼룩 몇 개만 적고 나오게 됩니다.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="flex: 1 1 280px; background: #FFFFFF; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #1447C8">01</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">눈에 안 보이는 하자</h3>
+<p style="margin: 0; font-size: 15px; color: #55616F">단열재 누락, 배관 누수, 바닥 기울어짐은 육안으로 확인이 어렵습니다. 장비로 측정해야 드러납니다.</p>
+</div>
+<div style="flex: 1 1 280px; background: #FFFFFF; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #1447C8">02</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">부족한 시간</h3>
+<p style="margin: 0; font-size: 15px; color: #55616F">방마다 창호, 타일, 콘센트, 수전까지 확인할 곳은 수백 군데. 체계적인 순서 없이는 다 볼 수 없습니다.</p>
+</div>
+<div style="flex: 1 1 280px; background: #FFFFFF; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #1447C8">03</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">입주 후엔 늦습니다</h3>
+<p style="margin: 0; font-size: 15px; color: #55616F">짐이 들어온 뒤 발견한 하자는 원인을 두고 다투기 쉽습니다. 입주 전 기록이 가장 확실한 근거입니다.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="promise" style="background: #0B1A2B; color: #FFFFFF; scroll-margin-top: 116px">
+<div style="max-width: 1160px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="max-width: 760px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #FFD21F; margin-bottom: 8px">바로잡기의 약속</div>
+<h2 style="margin: 0 0 12px; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.25; font-weight: 900; letter-spacing: -0.02em">자격증 개수가 아니라,<br>잡아낸 하자로 증명합니다</h2>
+<p style="margin: 0; font-size: 17px; color: #C5CFDB">벽에 걸린 자격증이 하자를 찾아 주지는 않습니다. 누가 오는지, 무엇으로 재는지, 결과가 건설사에서 받아들여지는지. 바로잡기는 이 세 가지로 평가받겠습니다.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 320px; border: 1px solid #2A3B50; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #FFD21F">01</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">일용직·파견직 없음, 전원 직속</h3>
+<p style="margin: 0; font-size: 15px; color: #C5CFDB">당일 모집한 인력을 보내지 않습니다. 현장에 방문하는 점검원은 모두 바로잡기 소속이며, 점검 결과는 회사가 책임집니다.</p>
+</div>
+<div style="flex: 1 1 320px; border: 1px solid #2A3B50; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #FFD21F">02</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">전문 교육을 마친 인원만 배치</h3>
+<p style="margin: 0; font-size: 15px; color: #C5CFDB">자체 이론 교육 40시간과 현장 동행 실습 10세대를 마친 점검원만 세대에 배치합니다. 자격증 취득만으로는 현장에 나가지 않습니다.</p>
+</div>
+<div style="flex: 1 1 320px; border: 1px solid #2A3B50; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #FFD21F">03</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">눈대중이 아닌 전문 장비</h3>
+<p style="margin: 0; font-size: 15px; color: #C5CFDB">열화상 카메라, 레이저 레벨기, 라돈 측정기, 수분 측정기로 측정하고, 측정값과 사진을 보고서에 그대로 남깁니다.</p>
+</div>
+<div style="flex: 1 1 320px; border: 1px solid #2A3B50; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #FFD21F">04</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">건수 부풀리기 없는 실제 하자</h3>
+<p style="margin: 0; font-size: 15px; color: #C5CFDB">건수만 늘린 보고서는 건설사에서 받아들여지지 않습니다. 보수 대상이 되는 하자를 위치, 근거와 함께 기록합니다.</p>
+</div>
+<div style="flex: 1 1 320px; border: 1px solid #2A3B50; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #FFD21F">05</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">국토교통부 가이드라인 준수</h3>
+<p style="margin: 0; font-size: 15px; color: #C5CFDB">부실 점검 시 비용의 30% 이내를 감액하는 조항을 계약서에 명시합니다. 점검 범위, 투입 인원, 장비, 비용은 계약 전에 서면으로 안내합니다.</p>
+</div>
+<div style="flex: 1 1 320px; border: 1px solid #2A3B50; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #FFD21F">06</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">그래도 가격은 합리적으로</h3>
+<p style="margin: 0; font-size: 15px; color: #C5CFDB">광고비와 중개 수수료를 줄여 합리적인 가격을 만들었습니다. 부가세 포함 정액제라 현장에서 추가되는 비용이 없습니다.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="items" style="scroll-margin-top: 116px">
+<div style="max-width: 1160px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="max-width: 720px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #1447C8; margin-bottom: 8px">점검 항목</div>
+<h2 style="margin: 0 0 12px; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.25; font-weight: 900; letter-spacing: -0.02em">현관부터 발코니까지, 세대 전체를 봅니다</h2>
+<p style="margin: 0; font-size: 17px; color: #55616F">150여 개 체크리스트에 따라 공간별로 빠짐없이 확인합니다.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 250px; border: 1px solid #DCE2EA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B1A2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0z"></path></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 800">단열·결로</h3>
+<p style="margin: 0; font-size: 14px; color: #55616F">열화상 카메라로 외벽·창호 주변 단열 불량과 결로 위험 부위 확인</p>
+</div>
+<div style="flex: 1 1 250px; border: 1px solid #DCE2EA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B1A2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.500 6-11 6-11z"></path></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 800">누수·배관</h3>
+<p style="margin: 0; font-size: 14px; color: #55616F">욕실·주방·발코니 배수 상태, 수전 수압, 천장과 벽체 누수 흔적</p>
+</div>
+<div style="flex: 1 1 250px; border: 1px solid #DCE2EA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B1A2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="6" rx="1.500"></rect><circle cx="12" cy="12" r="1.500"></circle><path d="M7 9v2M17 9v2"></path></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 800">바닥·벽 수평수직</h3>
+<p style="margin: 0; font-size: 14px; color: #55616F">레이저 레벨기로 바닥 기울기, 벽체 수직도, 문틀 뒤틀림 측정</p>
+</div>
+<div style="flex: 1 1 250px; border: 1px solid #DCE2EA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B1A2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1.500"></rect><path d="M12 3v18M4 12h16"></path></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 800">창호·문</h3>
+<p style="margin: 0; font-size: 14px; color: #55616F">개폐 상태, 잠금장치, 유리 흠집, 실리콘 마감, 방충망과 틈새</p>
+</div>
+<div style="flex: 1 1 250px; border: 1px solid #DCE2EA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B1A2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8"></rect><rect x="13" y="3" width="8" height="8"></rect><rect x="3" y="13" width="8" height="8"></rect><rect x="13" y="13" width="8" height="8"></rect></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 800">타일·마루</h3>
+<p style="margin: 0; font-size: 14px; color: #55616F">타일 들뜸과 깨짐, 줄눈 불량, 마루 찍힘과 들뜸, 걸레받이 마감</p>
+</div>
+<div style="flex: 1 1 250px; border: 1px solid #DCE2EA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B1A2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="7" rx="1.500"></rect><path d="M12 10v4"></path><rect x="10" y="14" width="4" height="7" rx="1"></rect></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 800">도배·도장·마감</h3>
+<p style="margin: 0; font-size: 14px; color: #55616F">벽지 들뜸과 오염, 페인트 얼룩, 몰딩과 가구 마감 상태</p>
+</div>
+<div style="flex: 1 1 250px; border: 1px solid #DCE2EA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B1A2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L5 14h6l-1 8 8-12h-6l1-8z"></path></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 800">전기·설비</h3>
+<p style="margin: 0; font-size: 14px; color: #55616F">콘센트 통전, 조명과 스위치, 환기 장치, 월패드, 빌트인 가전 작동</p>
+</div>
+<div style="flex: 1 1 250px; border: 1px solid #DCE2EA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B1A2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"></path><path d="M3 12h16a3 3 0 1 1-3 3"></path><path d="M3 16h8"></path></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 800">실내 공기질</h3>
+<p style="margin: 0; font-size: 14px; color: #55616F">라돈, 폼알데하이드, 휘발성 유기화합물 수치 측정</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="process" style="background: #F3F5F8; scroll-margin-top: 116px">
+<div style="max-width: 1160px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="max-width: 720px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #1447C8; margin-bottom: 8px">진행 과정</div>
+<h2 style="margin: 0; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.25; font-weight: 900; letter-spacing: -0.02em">신청부터 건설사 접수까지 4단계</h2>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 20px">
+<li style="flex: 1 1 230px; background: #FFFFFF; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<span style="display: inline-flex; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center; background: #0B1A2B; color: #FFFFFF; font-family: 'IBM Plex Mono', monospace; font-weight: 600">1</span>
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">견적 신청·예약</h3>
+<p style="margin: 0; font-size: 15px; color: #55616F">단지와 평형을 알려주시면 비용과 가능한 일정을 안내합니다.</p>
+</li>
+<li style="flex: 1 1 230px; background: #FFFFFF; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<span style="display: inline-flex; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center; background: #0B1A2B; color: #FFFFFF; font-family: 'IBM Plex Mono', monospace; font-weight: 600">2</span>
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">현장 점검</h3>
+<p style="margin: 0; font-size: 15px; color: #55616F">사전점검일에 전문 점검원이 방문해 약 2~3시간 동안 세대 전체를 점검합니다.</p>
+</li>
+<li style="flex: 1 1 230px; background: #FFFFFF; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<span style="display: inline-flex; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center; background: #0B1A2B; color: #FFFFFF; font-family: 'IBM Plex Mono', monospace; font-weight: 600">3</span>
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">하자 보고서 전달</h3>
+<p style="margin: 0; font-size: 15px; color: #55616F">하자 위치, 사진, 측정값을 정리한 보고서를 점검 후 24시간 안에 보내드립니다.</p>
+</li>
+<li style="flex: 1 1 230px; background: #FFFFFF; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<span style="display: inline-flex; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center; background: #0B1A2B; color: #FFFFFF; font-family: 'IBM Plex Mono', monospace; font-weight: 600">4</span>
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">건설사 접수 안내</h3>
+<p style="margin: 0; font-size: 15px; color: #55616F">건설사 하자 접수 방법과 보수 후 확인 요령까지 안내해 드립니다.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<section id="price" style="scroll-margin-top: 116px">
+<div style="max-width: 1160px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="max-width: 720px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #1447C8; margin-bottom: 8px">비용</div>
+<h2 style="margin: 0 0 12px; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.25; font-weight: 900; letter-spacing: -0.02em">부가세 포함 정액제,<br>간 보지 않습니다</h2>
+<p style="margin: 0; font-size: 17px; color: #55616F">아래 금액이 최종 결제 금액입니다. 장비 점검, 하자 보고서, 부가세까지 모두 포함입니다.</p>
+<button type="button" data-open-popup style="margin-top: 16px; min-height: 48px; padding: 0 20px; border: 2px solid #0B1A2B; border-radius: 10px; background: #FFD21F; color: #0B1A2B; font: inherit; font-size: 16px; font-weight: 900; cursor: pointer">전국 최저가 보상제 자세히 보기</button>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch">
+<div style="flex: 1 1 280px; border: 1px solid #DCE2EA; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">20평대 이하</h3>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 600">179,000<span style="font-family: 'Gothic A1', sans-serif; font-size: 18px; font-weight: 700">원</span></div>
+<p style="margin: 0; font-size: 15px; color: #55616F; flex: 1">전용 59㎡ 이하 세대</p>
+<a href="#apply" style="display: flex; align-items: center; justify-content: center; min-height: 48px; border: 1px solid #0B1A2B; border-radius: 10px; color: #0B1A2B; text-decoration: none; font-weight: 800">예약 문의</a>
+</div>
+<div style="flex: 1 1 280px; border: 2px solid #0B1A2B; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px; background: #0B1A2B; color: #FFFFFF">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">30평대</h3>
+<span style="padding: 4px 10px; border-radius: 999px; background: #FFD21F; color: #0B1A2B; font-size: 13px; font-weight: 800">가장 많이 선택</span>
+</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 600">249,000<span style="font-family: 'Gothic A1', sans-serif; font-size: 18px; font-weight: 700">원</span></div>
+<p style="margin: 0; font-size: 15px; color: #C5CFDB; flex: 1">전용 84㎡ 전후 세대</p>
+<a href="#apply" style="display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 10px; background: #FFD21F; color: #0B1A2B; text-decoration: none; font-weight: 900">예약 문의</a>
+</div>
+<div style="flex: 1 1 280px; border: 1px solid #DCE2EA; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">40평대 이상</h3>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 600">319,000<span style="font-family: 'Gothic A1', sans-serif; font-size: 18px; font-weight: 700">원</span></div>
+<p style="margin: 0; font-size: 15px; color: #55616F; flex: 1">대형 평형, 복층, 펜트하우스는 별도 견적</p>
+<a href="#apply" style="display: flex; align-items: center; justify-content: center; min-height: 48px; border: 1px solid #0B1A2B; border-radius: 10px; color: #0B1A2B; text-decoration: none; font-weight: 800">예약 문의</a>
+</div>
+</div>
+<div style="border-radius: 16px; padding: 28px 32px; background: #FFD21F; color: #0B1A2B; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px">
+<div style="flex: 1 1 420px; min-width: 0">
+<h3 style="margin: 0 0 4px; font-size: 22px; font-weight: 900">'공동구매가', '~원부터'에 속지 마세요</h3>
+<p style="margin: 0; font-size: 15px; font-weight: 500">부가세나 필수 옵션이 빠진 금액일 수 있습니다. 계약 전에 최종 결제 금액을 꼭 확인하세요. 바로잡기는 인원이 모이길 기다릴 필요 없이, 혼자 신청해도 누구에게나 같은 정액입니다.</p>
+</div>
+<a href="#apply" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: 10px; background: #0B1A2B; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 16px">정액 견적 받기</a>
+</div>
+</div>
+</section>
+
+<section style="background: #F3F5F8">
+<div style="max-width: 1160px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="max-width: 720px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #1447C8; margin-bottom: 8px">점검 사례</div>
+<h2 style="margin: 0; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.25; font-weight: 900; letter-spacing: -0.02em">이런 하자를 찾아냅니다</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<figure style="flex: 1 1 300px; margin: 0; background: #FFFFFF; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column">
+<div style="position: relative">
+<img loading="lazy" src="assets/thermal-window.webp" alt="창틀 모서리가 주변보다 차갑게 나타난 열화상 화면" style="display: block; width: 100%; height: 220px; object-fit: cover">
+<span style="position: absolute; top: 10px; left: 10px; padding: 3px 8px; border-radius: 6px; background: #06101C; color: #FFFFFF; font-size: 12px; font-weight: 700">예시 이미지</span>
+</div>
+<figcaption style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 17px; font-weight: 800">열화상 · 창호 단열 불량</div>
+<p style="margin: 0; font-size: 15px; color: #55616F">창틀 모서리 온도가 주변보다 낮게 측정되는 부위. 결로와 곰팡이로 이어질 수 있습니다.</p>
+</figcaption>
+</figure>
+<figure style="flex: 1 1 300px; margin: 0; background: #FFFFFF; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column">
+<div style="position: relative">
+<img loading="lazy" src="assets/window-sealant.webp" alt="창틀 둘레 실리콘이 들뜨고 끊긴 모습" style="display: block; width: 100%; height: 220px; object-fit: cover">
+<span style="position: absolute; top: 10px; left: 10px; padding: 3px 8px; border-radius: 6px; background: #06101C; color: #FFFFFF; font-size: 12px; font-weight: 700">예시 이미지</span>
+</div>
+<figcaption style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 17px; font-weight: 800">창호 실리콘 마감 불량</div>
+<p style="margin: 0; font-size: 15px; color: #55616F">창틀 둘레 실리콘이 들뜨고 끊긴 상태. 틈새바람과 빗물 유입의 원인이 됩니다.</p>
+</figcaption>
+</figure>
+<figure style="flex: 1 1 300px; margin: 0; background: #FFFFFF; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column">
+<div style="position: relative">
+<img loading="lazy" src="assets/tile-gap.webp" alt="욕실 벽 타일 사이가 벌어져 속이 보이는 모습" style="display: block; width: 100%; height: 220px; object-fit: cover">
+<span style="position: absolute; top: 10px; left: 10px; padding: 3px 8px; border-radius: 6px; background: #06101C; color: #FFFFFF; font-size: 12px; font-weight: 700">예시 이미지</span>
+</div>
+<figcaption style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 17px; font-weight: 800">욕실 타일 줄눈 벌어짐</div>
+<p style="margin: 0; font-size: 15px; color: #55616F">타일 사이가 벌어져 속이 보이는 상태. 물이 스며들면 들뜸과 탈락으로 이어집니다.</p>
+</figcaption>
+</figure>
+<figure style="flex: 1 1 300px; margin: 0; background: #FFFFFF; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column">
+<div style="position: relative">
+<img loading="lazy" src="assets/floor-level.webp" alt="마루 바닥 위에 수평계를 놓고 기울기를 재는 모습" style="display: block; width: 100%; height: 220px; object-fit: cover">
+<span style="position: absolute; top: 10px; left: 10px; padding: 3px 8px; border-radius: 6px; background: #06101C; color: #FFFFFF; font-size: 12px; font-weight: 700">예시 이미지</span>
+</div>
+<figcaption style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 17px; font-weight: 800">바닥 수평 측정</div>
+<p style="margin: 0; font-size: 15px; color: #55616F">방마다 바닥 기울기를 장비로 확인합니다. 가구 배치와 문 여닫힘에 영향을 주는 항목입니다.</p>
+</figcaption>
+</figure>
+<figure style="flex: 1 1 300px; margin: 0; background: #FFFFFF; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column">
+<div style="position: relative">
+<img loading="lazy" src="assets/sink-leak.webp" alt="싱크대 하부장 배수관 연결부 주변에 물 자국이 남은 모습" style="display: block; width: 100%; height: 220px; object-fit: cover">
+<span style="position: absolute; top: 10px; left: 10px; padding: 3px 8px; border-radius: 6px; background: #06101C; color: #FFFFFF; font-size: 12px; font-weight: 700">예시 이미지</span>
+</div>
+<figcaption style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 17px; font-weight: 800">싱크대 하부 배수관 누수</div>
+<p style="margin: 0; font-size: 15px; color: #55616F">배수관 연결부 주변의 물 자국. 하부장 안쪽까지 열어서 확인합니다.</p>
+</figcaption>
+</figure>
+</div>
+<h3 style="margin: 16px 0 0; font-size: 22px; font-weight: 900">찾아낸 하자는 보고서로 정리해 드립니다</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<figure style="flex: 1 1 300px; margin: 0; background: #FFFFFF; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column">
+<div style="position: relative; height: 200px; overflow: hidden; background: #DCE2EA">
+<svg viewBox="0 0 360 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="번호, 사진, 위치와 내용이 정리된 하자 점검 보고서 예시 그림" style="display: block; width: 100%; height: 100%">
+<rect x="76" y="24" width="220" height="200" fill="#B4BFCC"></rect>
+<rect x="70" y="18" width="220" height="200" fill="#FFFFFF"></rect>
+<rect x="70" y="18" width="220" height="32" fill="#0B1A2B"></rect>
+<text x="84" y="39" font-size="13" font-weight="800" fill="#FFFFFF">하자 점검 보고서</text>
+<rect x="84" y="62" width="20" height="20" rx="4" fill="#FFD21F"></rect>
+<text x="94" y="77" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="600" fill="#0B1A2B">01</text>
+<rect x="112" y="59" width="36" height="26" fill="#C5CFDB"></rect>
+<text x="156" y="71" font-size="11" font-weight="700" fill="#0B1A2B">거실 · 창호 실리콘 마감</text>
+<rect x="156" y="77" width="96" height="5" rx="2" fill="#DCE2EA"></rect>
+<path d="M84 94h192" stroke="#E3E8EE" stroke-width="1"></path>
+<rect x="84" y="102" width="20" height="20" rx="4" fill="#FFD21F"></rect>
+<text x="94" y="117" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="600" fill="#0B1A2B">02</text>
+<rect x="112" y="99" width="36" height="26" fill="#C5CFDB"></rect>
+<text x="156" y="111" font-size="11" font-weight="700" fill="#0B1A2B">욕실 · 벽 타일 들뜸</text>
+<rect x="156" y="117" width="80" height="5" rx="2" fill="#DCE2EA"></rect>
+<path d="M84 134h192" stroke="#E3E8EE" stroke-width="1"></path>
+<rect x="84" y="142" width="20" height="20" rx="4" fill="#FFD21F"></rect>
+<text x="94" y="157" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="600" fill="#0B1A2B">03</text>
+<rect x="112" y="139" width="36" height="26" fill="#C5CFDB"></rect>
+<text x="156" y="151" font-size="11" font-weight="700" fill="#0B1A2B">안방 · 바닥 수평 불량</text>
+<rect x="156" y="157" width="104" height="5" rx="2" fill="#DCE2EA"></rect>
+<path d="M84 174h192" stroke="#E3E8EE" stroke-width="1"></path>
+<rect x="84" y="182" width="20" height="20" rx="4" fill="#FFD21F"></rect>
+<rect x="112" y="179" width="36" height="26" fill="#C5CFDB"></rect>
+<text x="156" y="191" font-size="11" font-weight="700" fill="#0B1A2B">주방 · 수전 누수 흔적</text>
+</svg>
+<span style="position: absolute; top: 10px; left: 10px; padding: 3px 8px; border-radius: 6px; background: #06101C; color: #FFFFFF; font-size: 12px; font-weight: 700">예시 이미지</span>
+</div>
+<figcaption style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 17px; font-weight: 800">공간별 하자 목록</div>
+<p style="margin: 0; font-size: 15px; color: #55616F">현관, 거실, 방, 욕실, 발코니 순서로 위치와 내용을 정리해 건설사 접수 양식에 옮기기 쉽습니다.</p>
+</figcaption>
+</figure>
+<figure style="flex: 1 1 300px; margin: 0; background: #FFFFFF; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column">
+<div style="position: relative; height: 200px; overflow: hidden; background: #EEF1F5">
+<svg viewBox="0 0 360 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="평면도 위에 하자 위치를 번호로 표시한 예시 그림" style="display: block; width: 100%; height: 100%">
+<rect x="40" y="24" width="280" height="152" fill="#FFFFFF" stroke="#0B1A2B" stroke-width="3"></rect>
+<path d="M150 24v96M235 24v152M40 120h195M235 100h85" stroke="#0B1A2B" stroke-width="2" fill="none"></path>
+<text x="95" y="78" text-anchor="middle" font-size="11" font-weight="700" fill="#55616F">방</text>
+<text x="192" y="78" text-anchor="middle" font-size="11" font-weight="700" fill="#55616F">거실</text>
+<text x="137" y="154" text-anchor="middle" font-size="11" font-weight="700" fill="#55616F">주방</text>
+<text x="277" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#55616F">안방</text>
+<text x="277" y="146" text-anchor="middle" font-size="11" font-weight="700" fill="#55616F">욕실</text>
+<circle cx="128" cy="42" r="11" fill="#FFD21F" stroke="#0B1A2B" stroke-width="2"></circle>
+<text x="128" y="46" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="600" fill="#0B1A2B">1</text>
+<circle cx="205" cy="104" r="11" fill="#FFD21F" stroke="#0B1A2B" stroke-width="2"></circle>
+<text x="205" y="108" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="600" fill="#0B1A2B">2</text>
+<circle cx="300" cy="84" r="11" fill="#FFD21F" stroke="#0B1A2B" stroke-width="2"></circle>
+<text x="300" y="88" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="600" fill="#0B1A2B">3</text>
+<circle cx="254" cy="160" r="11" fill="#FFD21F" stroke="#0B1A2B" stroke-width="2"></circle>
+<text x="254" y="164" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="600" fill="#0B1A2B">4</text>
+<circle cx="66" cy="158" r="11" fill="#FFD21F" stroke="#0B1A2B" stroke-width="2"></circle>
+<text x="66" y="162" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="600" fill="#0B1A2B">5</text>
+</svg>
+<span style="position: absolute; top: 10px; left: 10px; padding: 3px 8px; border-radius: 6px; background: #06101C; color: #FFFFFF; font-size: 12px; font-weight: 700">예시 이미지</span>
+</div>
+<figcaption style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 17px; font-weight: 800">하자 위치 표시</div>
+<p style="margin: 0; font-size: 15px; color: #55616F">평면도에 하자 위치를 표시해 보수 담당자가 현장에서 바로 찾을 수 있습니다.</p>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section id="faq" style="scroll-margin-top: 116px">
+<div style="max-width: 860px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 32px">
+<h2 style="margin: 0; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.25; font-weight: 900; letter-spacing: -0.02em">자주 묻는 질문</h2>
+<div style="display: flex; flex-direction: column; border-top: 2px solid #0B1A2B">
+<div style="border-bottom: 1px solid #DCE2EA">
+<button type="button" data-faq aria-expanded="true" style="width: 100%; min-height: 64px; padding: 16px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: 0; font: inherit; font-size: 18px; font-weight: 800; color: #0B1A2B; text-align: left; cursor: pointer">
+<span>사전점검, 직접 해도 되지 않나요?</span>
+<span data-faq-mark aria-hidden="true" style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 500; flex: none">−</span>
+</button>
+<p style="display: block; margin: 0; padding: 0 0 24px; font-size: 16px; color: #55616F">직접 하셔도 됩니다. 다만 단열 불량, 누수, 바닥 기울기처럼 장비로 측정해야 확인되는 하자는 육안으로 찾기 어렵고, 정해진 시간 안에 세대 전체를 빠짐없이 보려면 체계적인 순서가 필요합니다.</p>
+</div>
+<div style="border-bottom: 1px solid #DCE2EA">
+<button type="button" data-faq aria-expanded="false" style="width: 100%; min-height: 64px; padding: 16px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: 0; font: inherit; font-size: 18px; font-weight: 800; color: #0B1A2B; text-align: left; cursor: pointer">
+<span>왜 다른 곳보다 저렴한가요? 품질이 떨어지지 않나요?</span>
+<span data-faq-mark aria-hidden="true" style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 500; flex: none">+</span>
+</button>
+<p style="display: none; margin: 0; padding: 0 0 24px; font-size: 16px; color: #55616F">광고비와 중개 플랫폼 수수료를 줄이고, 외주 없이 직속 인력으로 운영해 중간 비용을 없앴습니다. 점검 인원, 장비, 점검 항목은 줄이지 않습니다.</p>
+</div>
+<div style="border-bottom: 1px solid #DCE2EA">
+<button type="button" data-faq aria-expanded="false" style="width: 100%; min-height: 64px; padding: 16px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: 0; font: inherit; font-size: 18px; font-weight: 800; color: #0B1A2B; text-align: left; cursor: pointer">
+<span>점검에 얼마나 걸리나요? 꼭 같이 있어야 하나요?</span>
+<span data-faq-mark aria-hidden="true" style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 500; flex: none">+</span>
+</button>
+<p style="display: none; margin: 0; padding: 0 0 24px; font-size: 16px; color: #55616F">평형에 따라 약 2~3시간이 걸립니다. 처음과 마지막에 함께 계시면 발견한 하자를 현장에서 직접 설명해 드립니다.</p>
+</div>
+<div style="border-bottom: 1px solid #DCE2EA">
+<button type="button" data-faq aria-expanded="false" style="width: 100%; min-height: 64px; padding: 16px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: 0; font: inherit; font-size: 18px; font-weight: 800; color: #0B1A2B; text-align: left; cursor: pointer">
+<span>발견한 하자는 건설사에 어떻게 접수하나요?</span>
+<span data-faq-mark aria-hidden="true" style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 500; flex: none">+</span>
+</button>
+<p style="display: none; margin: 0; padding: 0 0 24px; font-size: 16px; color: #55616F">점검 후 하자 위치와 사진을 정리한 보고서를 드립니다. 건설사가 안내한 접수 방식(앱, 접수지 등)에 맞춰 그대로 옮겨 적으실 수 있도록 정리해 드립니다.</p>
+</div>
+<div style="border-bottom: 1px solid #DCE2EA">
+<button type="button" data-faq aria-expanded="false" style="width: 100%; min-height: 64px; padding: 16px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: 0; font: inherit; font-size: 18px; font-weight: 800; color: #0B1A2B; text-align: left; cursor: pointer">
+<span>예약 변경이나 취소는 가능한가요?</span>
+<span data-faq-mark aria-hidden="true" style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 500; flex: none">+</span>
+</button>
+<p style="display: none; margin: 0; padding: 0 0 24px; font-size: 16px; color: #55616F">점검일 3일 전까지는 무료로 변경·취소할 수 있습니다. 2일 전부터 전날까지는 결제 금액의 50%가 환불되며, 당일 취소는 환불이 어렵습니다. 건설사 사정으로 사전점검 일정이 바뀐 경우에는 수수료 없이 변경해 드립니다.</p>
+</div>
+<div style="border-bottom: 1px solid #DCE2EA">
+<button type="button" data-faq aria-expanded="false" style="width: 100%; min-height: 64px; padding: 16px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: 0; font: inherit; font-size: 18px; font-weight: 800; color: #0B1A2B; text-align: left; cursor: pointer">
+<span>사전점검 기간이 지났거나 이미 입주했는데 점검받을 수 있나요?</span>
+<span data-faq-mark aria-hidden="true" style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 500; flex: none">+</span>
+</button>
+<p style="display: none; margin: 0; padding: 0 0 24px; font-size: 16px; color: #55616F">가능합니다. 입주 후에도 하자보수 청구 기간 안이라면 점검을 받아 건설사에 접수할 수 있습니다. 다만 가구와 짐이 들어오면 확인하기 어려운 부위가 생기므로 가능하면 입주 전 점검을 권합니다.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section style="background: #0B1A2B; color: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center">
+<h2 style="margin: 0; font-size: clamp(28px, 4vw, 44px); line-height: 1.25; font-weight: 900; letter-spacing: -0.02em">사전점검일이 정해졌다면,<br>지금 예약하세요</h2>
+<p style="margin: 0; font-size: 17px; color: #C5CFDB; max-width: 560px">같은 단지 사전점검은 며칠 안에 몰립니다. 원하는 날짜와 시간은 먼저 신청하신 순서대로 배정됩니다.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
+<a href="#apply" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 32px; border-radius: 10px; background: #FFD21F; color: #0B1A2B; text-decoration: none; font-weight: 900; font-size: 18px">무료 견적 받기</a>
+<a href="tel:01071505238" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 32px; border-radius: 10px; border: 1px solid #FFFFFF; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 18px">전화 상담 010-7150-5238</a>
+</div>
+</div>
+</section>
+
+<section id="privacy-policy" style="background: #F3F5F8; scroll-margin-top: 116px">
+<div style="max-width: 860px; margin: 0 auto; padding: 48px 24px">
+<details>
+<summary style="min-height: 44px; display: flex; align-items: center; cursor: pointer; font-size: 18px; font-weight: 800; color: #0B1A2B">개인정보처리방침 보기</summary>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 16px; font-size: 15px; color: #3D4855">
+<p style="margin: 0">바로잡기(이하 "회사")는 견적 상담 신청 시 아래와 같이 개인정보를 처리합니다.</p>
+<p style="margin: 0"><strong>1. 수집하는 항목</strong><br>아파트 단지명, 평형, 사전점검 예정일, 연락처(휴대전화 번호)</p>
+<p style="margin: 0"><strong>2. 수집·이용 목적</strong><br>입주 사전점검 견적 안내, 상담, 예약 일정 조율</p>
+<p style="margin: 0"><strong>3. 보유 및 이용 기간</strong><br>수집일로부터 1년간 보관한 뒤 지체 없이 파기합니다. 그 전에 삭제를 요청하시면 즉시 파기합니다.</p>
+<p style="margin: 0"><strong>4. 제3자 제공</strong><br>수집한 개인정보를 제3자에게 제공하지 않습니다. 법령에 따라 요구되는 경우는 예외로 합니다.</p>
+<p style="margin: 0"><strong>5. 처리 위탁 및 보관 위치</strong><br>신청 내용은 이 홈페이지를 운영하는 호스팅 서비스의 서버(국외 포함)에 저장됩니다.</p>
+<p style="margin: 0"><strong>6. 동의를 거부할 권리</strong><br>개인정보 수집·이용에 동의하지 않으실 수 있습니다. 다만 동의하지 않으시면 온라인 견적 신청은 이용하실 수 없으며, 전화로 상담하실 수 있습니다.</p>
+<p style="margin: 0"><strong>7. 정보주체의 권리</strong><br>언제든지 본인의 개인정보 열람, 정정, 삭제, 처리 정지를 요청하실 수 있습니다. 아래 연락처로 요청하시면 지체 없이 처리합니다.</p>
+<p style="margin: 0"><strong>8. 개인정보 보호책임자</strong><br>바로잡기 대표 · 전화 010-7150-5238</p>
+<p style="margin: 0"><strong>9. 시행일</strong><br>2026년 10월 9일</p>
+</div>
+</details>
+</div>
+</section>
+
+<footer id="privacy" style="background: #06101C; color: #A9B4C2">
+<div style="max-width: 1160px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; font-size: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="color: #FFFFFF; font-weight: 900; font-size: 18px; margin-bottom: 4px">바로잡기</div>
+<div>전화 010-7150-5238</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div>상담 시간 매일 09:00~20:00</div>
+<div>서비스 지역 서울·경기 전역</div>
+<div><a href="#privacy-policy" style="color: #FFFFFF">개인정보처리방침</a></div>
+</div>
+</div>
+</footer>
+
+</div>
+<script>
+document.addEventListener('click',function(e){var t=e.target;var p=document.getElementById('popup');
+if(t.closest('[data-close-popup]')){p.style.display='none';return}
+if(t.closest('[data-open-popup]')){p.style.display='flex';return}
+var b=t.closest('[data-faq]');if(b){var o=b.getAttribute('aria-expanded')!=='true';document.querySelectorAll('[data-faq]').forEach(function(x){var on=x===b&&o;x.setAttribute('aria-expanded',on?'true':'false');x.querySelector('[data-faq-mark]').textContent=on?'\u2212':'+';x.nextElementSibling.style.display=on?'block':'none'})}});
+document.addEventListener('submit',function(e){e.preventDefault();var f=e.target;if(f.website&&f.website.value)return;
+var b='[무료 견적 신청]\n단지: '+f.apt.value+'\n평형: '+f.size.value+'\n예정일: '+(f.date.value||'미정')+'\n연락처: '+f.phone.value;
+location.href='sms:01071505238?&body='+encodeURIComponent(b)});
+</script></body></html>
