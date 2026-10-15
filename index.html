@@ -630,6 +630,7 @@ section h3{transition:transform .25s ease}
         if (k < 1) requestAnimationFrame(step);
       }
       requestAnimationFrame(step);
+      setTimeout(function () { el.textContent = end + rest; }, 1500);   // always land on the exact final value
     });
   }
   if (stats.length) {
