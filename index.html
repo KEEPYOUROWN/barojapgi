@@ -49,10 +49,11 @@ h3{font-size:19px;font-weight:800}
 .nav{display:flex;gap:22px;font-size:15px;font-weight:700}
 .nav a{text-decoration:none;color:var(--mut)}
 .nav a:hover{color:#fff}
+.nav a{padding:6px 0}
 .hd-r{display:flex;align-items:center;gap:12px}
 .tel{display:flex;align-items:center;gap:6px;text-decoration:none;font-weight:800;font-size:15px}
 .hd .btn{min-height:42px;padding:0 16px;font-size:14px;border-radius:12px}
-@media(max-width:860px){.nav{display:none}}
+@media(max-width:860px){.hd .wrap{flex-wrap:wrap;row-gap:0}.nav{order:3;width:100%;overflow-x:auto;gap:20px;padding:2px 0 12px;white-space:nowrap;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}}
 @media(max-width:480px){.tel span{display:none}}
 /* photo strip */
 #photo-strip{overflow:hidden;background:var(--b3)}
@@ -154,6 +155,15 @@ h3{font-size:19px;font-weight:800}
 .st-n{width:34px;height:34px;border-radius:50%;background:#fff;color:var(--b);font-weight:900;display:flex;align-items:center;justify-content:center}
 .steps b{font-size:18px}
 .steps span:not(.st-n){font-size:14px;color:var(--mut)}
+/* fire two-up */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;scroll-margin-top:84px}
+.svc-b{background:#fff;color:var(--ink);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:8px;scroll-margin-top:90px;box-shadow:0 12px 32px rgba(0,0,0,.25)}
+.svc-n2{font-size:14px;font-weight:900;color:var(--bt)}
+.svc-b h3{font-size:28px;font-weight:900}
+.svc-b p{font-size:15px;color:#3A4680}
+.svc-b b{color:var(--b);font-size:18px;font-weight:900;margin-top:6px}
+.grid4 .glass h3{font-size:18px}
+#price{scroll-margin-top:72px}
 /* services */
 .svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .svc-c{display:flex;flex-direction:column;gap:8px;padding:30px;border-radius:var(--r);background:#fff;color:var(--ink);text-decoration:none;box-shadow:0 12px 32px rgba(0,0,0,.25);transition:transform .2s ease,box-shadow .2s ease}
@@ -254,7 +264,7 @@ html.dyn .dyn-rev.dyn-in{opacity:1;transform:none}
 
 <header class="hd"><div class="wrap">
   <a class="logo" href="#top"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#FFFFFF"/><g fill="none" stroke="#0A2A9E" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l10-8 10 8"/><path d="M9 14v11h14V14"/><path d="M13 19l2.500 2.500 4.500-4.500"/></g></svg><span>바로잡기<small>입주 케어</small></span></a>
-  <nav class="nav" aria-label="메뉴"><a href="#services">서비스</a><a href="#price">점검 가격</a><a href="#fire">방화판·방화유리</a><a href="#reviews">후기</a><a href="#faq">질문</a></nav>
+  <nav class="nav" aria-label="메뉴"><a href="#price">입주 사전점검</a><a href="#fire-board">방화판 시공</a><a href="#fire-glass">방화유리 시공</a><a href="#reviews">후기</a><a href="#faq">질문</a></nav>
   <div class="hd-r"><a class="tel" href="tel:01071505238"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>010-7150-5238</span></a><a class="btn btn-y" href="#apply">견적 받기</a></div>
 </div></header>
 
@@ -300,11 +310,11 @@ html.dyn .dyn-rev.dyn-in{opacity:1;transform:none}
       <span class="svc-n">01</span><h3>입주 사전점검</h3>
       <p>열화상·레이저 레벨기로 세대 전체를 점검하고 24시간 안에 보고서를 드려요.</p>
       <b class="svc-p">34평 기준 199,000원</b><span class="svc-go">견적 신청 →</span></a>
-    <a class="svc-c" href="#fire">
+    <a class="svc-c" href="#fire-board">
       <span class="svc-n">02</span><h3>방화판 시공</h3>
       <p>발코니 방화판 시공. 현장 실측 후 항목별로 견적을 안내해요.</p>
       <b class="svc-p">최소가 안내</b><span class="svc-go">자세히 보기 →</span></a>
-    <a class="svc-c" href="#fire">
+    <a class="svc-c" href="#fire-glass">
       <span class="svc-n">03</span><h3>방화유리 시공</h3>
       <p>발코니 방화유리 시공. 면적과 사양에 따라 금액이 달라져요.</p>
       <b class="svc-p">최소가 안내</b><span class="svc-go">자세히 보기 →</span></a>
@@ -371,7 +381,11 @@ html.dyn .dyn-rev.dyn-in{opacity:1;transform:none}
 <section id="fire" class="sec alt"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">입주 케어 · 시공</span><h2>방화판·방화유리 시공도<br>합리적으로 해요</h2>
     <p class="lead">발코니 방화판과 방화유리 시공도 진행해요. 면적과 사양에 따라 금액이 달라서, 현장 실측 후 정확한 견적을 안내드려요.</p></div>
-  <div class="grid4">
+  <div class="two">
+    <div class="svc-b" id="fire-board"><span class="svc-n2">서비스 02</span><h3>방화판 시공</h3><p>발코니 방화판 시공이에요. 면적과 시공 범위를 실측한 뒤 항목별로 견적을 안내해요.</p><b>최소가 안내 · 실측 후 확정</b></div>
+    <div class="svc-b" id="fire-glass"><span class="svc-n2">서비스 03</span><h3>방화유리 시공</h3><p>발코니 방화유리 시공이에요. 유리 면적과 사양에 따라 금액이 달라져 실측 후 안내해요.</p><b>최소가 안내 · 실측 후 확정</b></div>
+  </div>
+  <div class="grid4" style="margin-top:16px">
     <div class="glass"><h3>최소가부터 안내</h3><p>견적은 <b>최소 금액</b>을 먼저 알려드려요. 면적·사양에 따라 최소가보다 올라갈 수 있어요.</p></div>
     <div class="glass"><h3>실측 후 확정</h3><p>현장 실측 뒤 항목별로 나눈 견적을 안내하고, 확정된 금액만 받아요.</p></div>
     <div class="glass"><h3>사양을 견적서에</h3><p>자재 종류와 규격, 시공 범위를 견적서에 적어 드려요. 계약 전에 확인하세요.</p></div>
