@@ -6,10 +6,10 @@
 <meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="바로잡기">
 <meta property="og:title" content="사전점검, 거품 빼고 199,000원 | 바로잡기"><meta property="og:description" content="거품 뺀 입주 사전점검. 34평 기준 199,000원, 부가세 포함 정액. 열화상·레이저 레벨기로 세대 전체를 꼼꼼하게 점검하고 24시간 안에 보고서를 드립니다.">
 <meta property="og:url" content="https://barojapgi.kr/"><meta property="og:image" content="https://barojapgi.kr/og.png">
-<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#1F4FE0">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0A2A9E">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
-:root{--b:#1F4FE0;--b2:#1A44C8;--b3:#13328F;--ink:#0B1A4A;--y:#FFE14A;--mut:rgba(255,255,255,.84);--r:20px}
+:root{--b:#0A2A9E;--b2:#08217F;--b3:#061862;--bt:#1B4DE0;--ink:#0A1A55;--y:#FFE14A;--mut:rgba(255,255,255,.84);--r:20px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--b);color:#fff;font-family:Pretendard,'Gothic A1','Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.6;word-break:keep-all;-webkit-font-smoothing:antialiased}
@@ -21,17 +21,21 @@ h1,h2,h3{letter-spacing:-.025em;line-height:1.2}
 h2{font-size:clamp(28px,4.2vw,44px);font-weight:900}
 h3{font-size:19px;font-weight:800}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-.sec{padding:76px 0;scroll-margin-top:72px}
+.sec{padding:88px 0;scroll-margin-top:72px}
 .alt{background:var(--b2)}
 .deep{background:var(--b3)}
-.eyebrow{display:inline-block;padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.16);font-size:13px;font-weight:700;margin-bottom:14px}
+.eyebrow{display:inline-block;padding:0;background:none;color:#8FB0FF;font-size:14px;font-weight:800;letter-spacing:.02em;margin-bottom:12px}
 .lead{margin-top:12px;font-size:17px;color:var(--mut);max-width:640px}
 .sec-head{margin-bottom:34px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 24px;border-radius:14px;border:0;font:inherit;font-size:16px;font-weight:800;text-decoration:none;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
 .btn:hover{transform:translateY(-2px)}
-.btn-y{background:var(--y);color:var(--ink)}
-.btn-k{background:#FEE500;color:#191919}
+.btn-y{background:#fff;color:var(--b)}
+.btn-k{background:#fff;color:var(--b)}
+.kk{flex:none;width:26px;height:26px;border-radius:50%;background:#FEE500;display:inline-flex;align-items:center;justify-content:center}
 .btn-o{background:transparent;border:2px solid rgba(255,255,255,.7);color:#fff}
+.btn-b{background:var(--bt);color:#fff}
+.form .btn-y{background:var(--bt);color:#fff}
+.form .btn-k{background:#fff;color:var(--b);border:1.5px solid #B9C3E6}
 .btn-lg{min-height:58px;font-size:18px;padding:0 30px}
 .glass{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:var(--r);padding:26px}
 .glass p{margin-top:8px;color:var(--mut);font-size:15px}
@@ -58,14 +62,14 @@ h3{font-size:19px;font-weight:800}
 .ps-tile span{font-size:12px;color:var(--y);font-weight:600}
 @keyframes ps-slide{to{transform:translateX(-50%)}}
 /* hero */
-.hero{padding:56px 0 64px}
+.hero{padding:64px 0 76px}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start}
 @media(max-width:920px){.hero-grid{grid-template-columns:1fr}}
-.hero h1{font-size:clamp(40px,6.4vw,76px);font-weight:900;line-height:1.08}
+.hero h1{font-size:clamp(44px,7vw,88px);font-weight:900;line-height:1.04;letter-spacing:-.035em}
 .hero h1 em{font-style:normal;color:var(--y)}
 .hero .sub{margin-top:18px;font-size:clamp(16px,1.7vw,19px);color:var(--mut);max-width:560px}
-.pill{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-top:24px;padding:14px 20px;border-radius:16px;background:var(--y);color:var(--ink)}
-.pill b{font-size:clamp(30px,4vw,42px);font-weight:900;line-height:1;letter-spacing:-.02em}
+.pill{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-top:24px;padding:14px 20px;border-radius:16px;background:rgba(255,255,255,.12);border:2px solid #fff;color:#fff}
+.pill b{font-size:clamp(30px,4vw,42px);font-weight:900;line-height:1;letter-spacing:-.02em;color:var(--y)}
 .pill span{font-size:14px;font-weight:700}
 .stats{display:flex;flex-wrap:wrap;gap:14px 40px;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.22)}
 .stat b{display:block;font-size:30px;font-weight:900;line-height:1.1}
@@ -116,8 +120,8 @@ h3{font-size:19px;font-weight:800}
 /* price */
 .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .pc{position:relative;display:flex;flex-direction:column;gap:6px}
-.pc.hot{outline:4px solid var(--y);transform:translateY(-6px)}
-.pc .tag{position:absolute;top:-14px;left:24px;background:var(--y);color:var(--ink);font-size:12px;font-weight:900;padding:5px 12px;border-radius:999px}
+.pc.hot{outline:4px solid #fff;box-shadow:0 18px 44px rgba(0,0,0,.35);transform:translateY(-6px)}
+.pc .tag{position:absolute;top:-14px;left:24px;background:var(--bt);color:#fff;font-size:12px;font-weight:900;padding:5px 12px;border-radius:999px}
 .pc .nm{font-size:18px;font-weight:800}
 .pc .pr{font-size:clamp(38px,5vw,52px);font-weight:900;letter-spacing:-.03em;line-height:1.1;color:var(--b)}
 .pc .pr small{font-size:20px;font-weight:800;margin-left:2px;color:var(--ink)}
@@ -125,7 +129,7 @@ h3{font-size:19px;font-weight:800}
 .pc ul{list-style:none;margin:0 0 16px;padding:0;font-size:14px;display:flex;flex-direction:column;gap:6px;color:#2A356F}
 .pc li::before{content:"✓ ";font-weight:900;color:var(--b)}
 .pc .btn{margin-top:auto}
-.pc .btn-b{background:var(--b);color:#fff}
+.pc .btn-b{background:var(--bt);color:#fff}
 .price-note{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;font-size:14px;color:var(--mut)}
 .price-note button{background:none;border:0;color:#fff;font:inherit;font-weight:800;text-decoration:underline;cursor:pointer;padding:0}
 /* equip / defects / items / steps */
@@ -145,7 +149,7 @@ h3{font-size:19px;font-weight:800}
 .items span{font-size:13px;color:var(--mut)}
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
 .steps li{display:flex;flex-direction:column;gap:6px;padding:24px;border-radius:var(--r);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2)}
-.st-n{width:34px;height:34px;border-radius:50%;background:var(--y);color:var(--ink);font-weight:900;display:flex;align-items:center;justify-content:center}
+.st-n{width:34px;height:34px;border-radius:50%;background:#fff;color:var(--b);font-weight:900;display:flex;align-items:center;justify-content:center}
 .steps b{font-size:18px}
 .steps span:not(.st-n){font-size:14px;color:var(--mut)}
 /* facts */
@@ -154,7 +158,7 @@ h3{font-size:19px;font-weight:800}
 .fact{background:#fff;color:var(--ink);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:8px}
 .fact b{font-size:clamp(40px,5vw,54px);font-weight:900;letter-spacing:-.03em;line-height:1;color:var(--b)}
 .fact p{font-size:15px;color:#2A356F}
-.fact u{text-decoration:none;font-weight:800;background:linear-gradient(transparent 62%,#FFE14A 62%)}
+.fact u{text-decoration:none;font-weight:800;background:linear-gradient(transparent 62%,#C9D8FF 62%)}
 .fact small{margin-top:auto;font-size:12px;color:#6A74A0}
 .promise{margin-top:24px;font-size:clamp(17px,2vw,21px);font-weight:800;color:var(--y);max-width:760px}
 .src{margin-top:14px;font-size:12px;color:rgba(255,255,255,.78);max-width:900px}
@@ -184,22 +188,22 @@ h3{font-size:19px;font-weight:800}
 .policy summary{cursor:pointer;font-weight:800}
 .policy p{margin:12px 0 0;font-size:14px;color:#2A356F}
 /* floating kakao */
-.fab{position:fixed;right:16px;bottom:16px;z-index:40;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 20px;border-radius:999px;background:#FEE500;color:#191919;text-decoration:none;font-weight:800;font-size:16px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.fab{position:fixed;right:16px;bottom:16px;z-index:40;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 20px 0 14px;border-radius:999px;background:#fff;color:var(--b);text-decoration:none;font-weight:800;font-size:16px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
 /* popup */
 #popup{position:fixed;inset:0;z-index:60;background:rgba(5,14,56,.82);display:flex;justify-content:center;align-items:flex-start;padding:0 16px;overflow:auto}
 #popup[hidden]{display:none}
-.pop{width:100%;max-width:560px;margin-top:64px;margin-bottom:24px;background:var(--y);color:var(--ink);border-radius:26px;padding:26px 26px 28px;display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.pop{width:100%;max-width:560px;margin-top:64px;margin-bottom:24px;background:linear-gradient(160deg,#0F36BD,#061862);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:26px;padding:26px 26px 28px;display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.55)}
 .pop-top{display:flex;width:100%;justify-content:space-between;align-items:center;gap:12px}
-.pop-chip{padding:6px 14px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:800}
-.pop-x{width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:var(--ink);cursor:pointer;font-size:22px;font-weight:700}
+.pop-chip{padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.18);color:#fff;font-size:13px;font-weight:800}
+.pop-x{width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:var(--b);cursor:pointer;font-size:22px;font-weight:700}
 .pop h2{font-size:clamp(38px,9vw,64px);line-height:1.06}
 .pop .q{font-size:clamp(17px,3.2vw,21px);font-weight:800;line-height:1.4}
-.pop .box{width:100%;background:var(--ink);color:#fff;border-radius:16px;padding:20px;transform:rotate(-1.5deg)}
-.pop .box small{display:block;font-size:15px;font-weight:700;color:var(--y)}
+.pop .box{width:100%;background:#fff;color:var(--b);border-radius:16px;padding:20px;transform:rotate(-1.5deg)}
+.pop .box small{display:block;font-size:15px;font-weight:700;color:#4A5FA8}
 .pop .box b{display:block;font-size:clamp(32px,8vw,52px);line-height:1.15;font-weight:900}
 .pop .fine2{font-size:12px;line-height:1.5}
-.pop .btn{width:100%;background:var(--ink);color:#fff}
-.pop .skip{background:none;border:0;font:inherit;font-weight:700;text-decoration:underline;cursor:pointer;color:var(--ink);min-height:44px}
+.pop .btn{width:100%;background:#fff;color:var(--b)}
+.pop .skip{background:none;border:0;font:inherit;font-weight:700;text-decoration:underline;cursor:pointer;color:#fff;min-height:44px}
 /* motion */
 @keyframes dyn-up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @keyframes dyn-pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
@@ -209,7 +213,7 @@ h3{font-size:19px;font-weight:800}
 #apply{animation:dyn-up .9s cubic-bezier(.2,.7,.2,1) both .35s}
 html.dyn .dyn-rev{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 html.dyn .dyn-rev.dyn-in{opacity:1;transform:none}
-@keyframes dyn-pulse{0%{box-shadow:0 0 0 0 rgba(255,225,74,.6)}70%{box-shadow:0 0 0 14px rgba(255,225,74,0)}100%{box-shadow:0 0 0 0 rgba(255,225,74,0)}}
+@keyframes dyn-pulse{0%{box-shadow:0 0 0 0 rgba(27,77,224,.55)}70%{box-shadow:0 0 0 14px rgba(27,77,224,0)}100%{box-shadow:0 0 0 0 rgba(27,77,224,0)}}
 .form .btn-y{animation:dyn-pulse 2.4s ease-out infinite}
 @keyframes dyn-bob{0%,86%,100%{transform:translateY(0)}92%{transform:translateY(-7px)}96%{transform:translateY(0)}}
 .fab{animation:dyn-bob 5s ease-in-out infinite}
@@ -237,7 +241,7 @@ html.dyn .dyn-rev.dyn-in{opacity:1;transform:none}
 </div></div>
 
 <header class="hd"><div class="wrap">
-  <a class="logo" href="#top"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#FFE14A"/><g fill="none" stroke="#0B1A4A" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l10-8 10 8"/><path d="M9 14v11h14V14"/><path d="M13 19l2.500 2.500 4.500-4.500"/></g></svg><span>바로잡기</span></a>
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#FFFFFF"/><g fill="none" stroke="#0A2A9E" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l10-8 10 8"/><path d="M9 14v11h14V14"/><path d="M13 19l2.500 2.500 4.500-4.500"/></g></svg><span>바로잡기</span></a>
   <nav class="nav" aria-label="메뉴"><a href="#price">가격</a><a href="#care">꼼꼼함</a><a href="#reviews">후기</a><a href="#faq">질문</a></nav>
   <div class="hd-r"><a class="tel" href="tel:01071505238"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>010-7150-5238</span></a><a class="btn btn-y" href="#apply">견적 받기</a></div>
 </div></header>
@@ -270,7 +274,7 @@ html.dyn .dyn-rev.dyn-in{opacity:1;transform:none}
       <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
       <p class="err" id="lead-error" role="alert">전송에 실패했습니다. 잠시 후 다시 시도하시거나 010-7150-5238로 연락해 주세요.</p>
       <button class="btn btn-y btn-lg" type="submit">무료 견적 받기</button>
-      <a class="btn btn-k" href="https://pf.kakao.com/_xjNxhmX/chat" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#191919" d="M12 3C6.5 3 2 6.600 2 11c0 2.800 1.800 5.300 4.600 6.700l-1 3.600c-.1.300.3.600.6.400l4.200-2.800c.5.100 1.100.100 1.600.100 5.500 0 10-3.600 10-8S17.500 3 12 3z"/></svg>카카오톡으로 바로 상담</a>
+      <a class="btn btn-k" href="https://pf.kakao.com/_xjNxhmX/chat" target="_blank" rel="noopener"><span class="kk"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path fill="#191919" d="M12 3C6.5 3 2 6.600 2 11c0 2.800 1.800 5.300 4.600 6.700l-1 3.600c-.1.300.3.600.6.400l4.200-2.800c.5.100 1.100.100 1.600.100 5.500 0 10-3.600 10-8S17.500 3 12 3z"/></svg></span>카카오톡으로 바로 상담</a>
       <a class="btn" style="border:1.5px solid #B9C3E6;color:var(--ink)" href="sms:01071505238">문자로 바로 상담</a>
     </form>
   </div>
@@ -327,7 +331,7 @@ html.dyn .dyn-rev.dyn-in{opacity:1;transform:none}
   <div class="sec-head"><span class="eyebrow">가격표</span><h2>이게 끝이에요. 정액입니다</h2><p class="lead">아래 금액이 최종 결제 금액이에요. 장비 점검, 하자 보고서, 부가세까지 모두 포함입니다.</p></div>
   <div class="price-grid">
     <div class="card pc"><div class="nm">20평대 이하</div><div class="pr">149,000<small>원</small></div><div class="ds">전용 59㎡ 이하 세대</div><ul><li>장비 점검 포함</li><li>24시간 내 보고서</li><li>부가세 포함</li></ul><a class="btn btn-b" href="#apply">예약 문의</a></div>
-    <div class="card pc hot"><span class="tag">가장 많이 선택</span><div class="nm">30평대 (34평 기준)</div><div class="pr">199,000<small>원</small></div><div class="ds">전용 84㎡ 전후 세대</div><ul><li>장비 점검 포함</li><li>24시간 내 보고서</li><li>부가세 포함</li></ul><a class="btn btn-y" href="#apply">예약 문의</a></div>
+    <div class="card pc hot"><span class="tag">가장 많이 선택</span><div class="nm">30평대 (34평 기준)</div><div class="pr">199,000<small>원</small></div><div class="ds">전용 84㎡ 전후 세대</div><ul><li>장비 점검 포함</li><li>24시간 내 보고서</li><li>부가세 포함</li></ul><a class="btn btn-b" href="#apply">예약 문의</a></div>
     <div class="card pc"><div class="nm">40평대 이상</div><div class="pr">259,000<small>원</small></div><div class="ds">대형 평형, 복층, 펜트하우스는 별도 견적</div><ul><li>장비 점검 포함</li><li>24시간 내 보고서</li><li>부가세 포함</li></ul><a class="btn btn-b" href="#apply">예약 문의</a></div>
   </div>
   <div class="price-note"><span>'공동구매가', '~원부터'에 속지 마세요. 계약 전에 최종 결제 금액을 꼭 확인하세요.</span><button type="button" data-open-popup>전국 최저가 보상제 자세히 보기</button></div>
@@ -346,7 +350,7 @@ html.dyn .dyn-rev.dyn-in{opacity:1;transform:none}
 <section class="sec cta"><div class="wrap">
   <h2>사전점검일이 정해졌다면,<br>지금 예약하세요</h2>
   <p>같은 단지 사전점검은 며칠 안에 몰려요. 원하는 날짜와 시간은 먼저 신청하신 순서대로 배정됩니다.</p>
-  <div class="acts"><a class="btn btn-y btn-lg" href="#apply">무료 견적 받기</a><a class="btn btn-k btn-lg" href="https://pf.kakao.com/_xjNxhmX/chat" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#191919" d="M12 3C6.5 3 2 6.600 2 11c0 2.800 1.800 5.300 4.600 6.700l-1 3.600c-.1.300.3.600.6.400l4.200-2.800c.5.100 1.100.100 1.600.100 5.500 0 10-3.600 10-8S17.500 3 12 3z"/></svg>카톡 상담</a><a class="btn btn-o btn-lg" href="tel:01071505238">전화 010-7150-5238</a></div>
+  <div class="acts"><a class="btn btn-y btn-lg" href="#apply">무료 견적 받기</a><a class="btn btn-k btn-lg" href="https://pf.kakao.com/_xjNxhmX/chat" target="_blank" rel="noopener"><span class="kk"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path fill="#191919" d="M12 3C6.5 3 2 6.600 2 11c0 2.800 1.800 5.300 4.600 6.700l-1 3.600c-.1.300.3.600.6.400l4.200-2.800c.5.100 1.100.100 1.600.100 5.500 0 10-3.600 10-8S17.500 3 12 3z"/></svg></span>카톡 상담</a><a class="btn btn-o btn-lg" href="tel:01071505238">전화 010-7150-5238</a></div>
 </div></section>
 
 <section class="policy"><details id="privacy-policy"><summary>개인정보처리방침 보기</summary><p>옵티마켓(서비스명 바로잡기, 이하 "회사")는 견적 상담 신청 시 아래와 같이 개인정보를 처리합니다.</p><p><b>1. 수집하는 항목</b><br>아파트 단지명, 평형, 사전점검 예정일, 연락처(휴대전화 번호)</p><p><b>2. 수집·이용 목적</b><br>입주 사전점검 견적 안내, 상담, 예약 일정 조율</p><p><b>3. 보유 및 이용 기간</b><br>수집일로부터 1년간 보관한 뒤 지체 없이 파기합니다. 그 전에 삭제를 요청하시면 즉시 파기합니다.</p><p><b>4. 제3자 제공</b><br>수집한 개인정보를 제3자에게 제공하지 않습니다. 법령에 따라 요구되는 경우는 예외로 합니다.</p><p><b>5. 처리 위탁 및 보관 위치</b><br>이 홈페이지는 신청 내용을 서버에 저장하지 않습니다. 입력하신 내용은 고객님의 휴대전화 문자 앱으로 전달되며, 직접 전송하신 문자 메시지로만 접수됩니다.</p><p><b>6. 동의를 거부할 권리</b><br>개인정보 수집·이용에 동의하지 않으실 수 있습니다. 다만 동의하지 않으시면 온라인 견적 신청은 이용하실 수 없으며, 전화로 상담하실 수 있습니다.</p><p><b>7. 정보주체의 권리</b><br>언제든지 본인의 개인정보 열람, 정정, 삭제, 처리 정지를 요청하실 수 있습니다. 아래 연락처로 요청하시면 지체 없이 처리합니다.</p><p><b>8. 개인정보 보호책임자</b><br>옵티마켓 대표 권기표 · 전화 010-7150-5238</p><p><b>9. 시행일</b><br>2026년 10월 9일</p></details></section>
@@ -356,7 +360,7 @@ html.dyn .dyn-rev.dyn-in{opacity:1;transform:none}
   <div><span>상담 시간 매일 09:00~20:00</span><span>서비스 지역 서울·경기 전역</span><a href="#privacy-policy">개인정보처리방침</a></div>
 </div></footer>
 
-<a class="fab" href="https://pf.kakao.com/_xjNxhmX/chat" target="_blank" rel="noopener" aria-label="카카오톡 상담"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#191919" d="M12 3C6.5 3 2 6.600 2 11c0 2.800 1.800 5.300 4.600 6.700l-1 3.600c-.1.300.3.600.6.400l4.200-2.800c.5.100 1.100.100 1.600.100 5.500 0 10-3.600 10-8S17.500 3 12 3z"/></svg>카톡 상담</a>
+<a class="fab" href="https://pf.kakao.com/_xjNxhmX/chat" target="_blank" rel="noopener" aria-label="카카오톡 상담"><span class="kk"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path fill="#191919" d="M12 3C6.5 3 2 6.600 2 11c0 2.800 1.800 5.300 4.600 6.700l-1 3.600c-.1.300.3.600.6.400l4.200-2.800c.5.100 1.100.100 1.600.100 5.500 0 10-3.600 10-8S17.500 3 12 3z"/></svg></span>카톡 상담</a>
 <script>
 (function () {
   var $ = function (s) { return document.querySelector(s); };
