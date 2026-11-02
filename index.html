@@ -171,6 +171,16 @@ h3{font-size:19px;font-weight:800}
 #price{scroll-margin-top:72px}
 @media(max-width:760px){.pc.hot{transform:none;margin:14px 0}}
 @media (prefers-reduced-motion:reduce){.pc.hot,.pc.hot::after{animation:none}}
+/* hero service block */
+.hero-svc{margin-top:20px;max-width:560px;padding:20px 22px;border-radius:18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28)}
+.hs-t{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.hs-t b{font-size:20px;font-weight:900;letter-spacing:-.02em}
+.hs-badge{background:#fff;color:var(--b);font-size:12px;font-weight:900;padding:4px 10px;border-radius:999px}
+.hero-svc p{margin-top:8px;font-size:15px;color:var(--mut)}
+.hero-svc u{text-decoration:none;font-weight:800;color:#fff;box-shadow:inset 0 -6px 0 rgba(143,176,255,.55)}
+.hs-a{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px}
+.hs-l{font-size:15px;font-weight:800;color:#fff;text-decoration:none;border-bottom:2px solid rgba(255,255,255,.6);padding-bottom:1px}
+.hs-l:hover{border-color:#fff}
 /* services */
 .svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .svc-c{display:flex;flex-direction:column;gap:8px;padding:30px;border-radius:var(--r);background:#fff;color:var(--ink);text-decoration:none;box-shadow:0 12px 32px rgba(0,0,0,.25);transition:transform .2s ease,box-shadow .2s ease}
@@ -283,6 +293,11 @@ html.dyn .dyn-rev.dyn-in{opacity:1;transform:none}
     <h1>사전점검,<br>거품 빼고<br><em>199,000원</em></h1>
     <p class="sub">연락 잘 되고, 가격은 합리적으로, 점검은 끝까지 꼼꼼하게. 광고비·중개 수수료 거품은 빼고 열화상·레이저 레벨기로 봅니다. 입주 전에 못 찾은 하자는 입주 후 내 돈이 돼요.</p>
     <div class="pill"><span>34평 기준</span><b>199,000원</b><span>부가세 포함 · 추가 요금 없음</span></div>
+    <div class="hero-svc">
+      <div class="hs-t"><span class="hs-badge">시공도 해요</span><b>방화판 · 방화유리 시공</b></div>
+      <p>시공도 거품 없이 합리적으로 진행해요. 우리는 젊고, 아직 일이 고파요. 실측 후 <u>최소가</u>부터 안내드릴게요.</p>
+      <div class="hs-a"><a class="hs-l" href="#fire-board">방화판 시공 →</a><a class="hs-l" href="#fire-glass">방화유리 시공 →</a></div>
+    </div>
     <div class="stats">
       <div class="stat"><b data-static>2~3시간</b><span>세대 하나, 끝까지 꼼꼼하게</span></div>
       <div class="stat"><b>24시간</b><span>점검 후 보고서 전달</span></div>
@@ -387,7 +402,7 @@ html.dyn .dyn-rev.dyn-in{opacity:1;transform:none}
 
 <section id="fire" class="sec alt"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">입주 케어 · 시공</span><h2>방화판·방화유리 시공도<br>합리적으로 해요</h2>
-    <p class="lead">발코니 방화판과 방화유리 시공도 진행해요. 면적과 사양에 따라 금액이 달라서, 현장 실측 후 정확한 견적을 안내드려요.</p></div>
+    <p class="lead">발코니 방화판과 방화유리 시공도 진행해요. 우리는 젊고, 아직 일이 고파서 합리적으로 해요. 면적과 사양에 따라 금액이 달라서, 현장 실측 후 정확한 견적을 안내드려요.</p></div>
   <div class="two">
     <div class="svc-b" id="fire-board"><span class="svc-n2">서비스 02</span><h3>방화판 시공</h3><p>발코니 방화판 시공이에요. 면적과 시공 범위를 실측한 뒤 항목별로 견적을 안내해요.</p><b>최소가 안내 · 실측 후 확정</b></div>
     <div class="svc-b" id="fire-glass"><span class="svc-n2">서비스 03</span><h3>방화유리 시공</h3><p>발코니 방화유리 시공이에요. 유리 면적과 사양에 따라 금액이 달라져 실측 후 안내해요.</p><b>최소가 안내 · 실측 후 확정</b></div>
