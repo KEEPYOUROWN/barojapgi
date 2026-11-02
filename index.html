@@ -121,10 +121,15 @@ h3{font-size:19px;font-weight:800}
 .good li i{color:var(--b)}
 .fine{margin-top:14px;font-size:12px;color:rgba(255,255,255,.7)}
 /* price */
-.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;padding-top:44px;align-items:stretch}
 .pc{position:relative;display:flex;flex-direction:column;gap:6px}
-.pc.hot{outline:4px solid #fff;box-shadow:0 18px 44px rgba(0,0,0,.35);transform:translateY(-6px)}
-.pc .tag{position:absolute;top:-14px;left:24px;background:var(--bt);color:#fff;font-size:12px;font-weight:900;padding:5px 12px;border-radius:999px}
+.pc.hot{position:relative;z-index:2;background:linear-gradient(180deg,#fff 0%,#EAF0FF 100%);border:4px solid #fff;padding-top:36px;transform:translateY(-14px) scale(1.05);box-shadow:0 0 0 6px rgba(143,176,255,.65),0 26px 60px rgba(0,0,0,.5);animation:hot-glow 2.6s ease-in-out infinite}
+@keyframes hot-glow{0%,100%{box-shadow:0 0 0 6px rgba(143,176,255,.55),0 0 0 0 rgba(255,255,255,.0),0 26px 60px rgba(0,0,0,.5)}50%{box-shadow:0 0 0 8px rgba(255,255,255,.95),0 0 36px 10px rgba(143,176,255,.75),0 26px 60px rgba(0,0,0,.5)}}
+.pc.hot .pr{font-size:clamp(46px,6vw,64px)}
+.pc.hot .nm{font-size:20px}
+.pc.hot::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%);background-size:250% 100%;animation:hot-shine 4.2s ease-in-out infinite}
+@keyframes hot-shine{0%{background-position:160% 0}55%,100%{background-position:-60% 0}}
+.pc .tag{position:absolute;top:-20px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--bt);color:#fff;font-size:14px;font-weight:900;padding:8px 18px;border-radius:999px;border:3px solid #fff;box-shadow:0 8px 20px rgba(0,0,0,.35)}
 .pc .nm{font-size:18px;font-weight:800}
 .pc .pr{font-size:clamp(38px,5vw,52px);font-weight:900;letter-spacing:-.03em;line-height:1.1;color:var(--b)}
 .pc .pr small{font-size:20px;font-weight:800;margin-left:2px;color:var(--ink)}
@@ -164,6 +169,8 @@ h3{font-size:19px;font-weight:800}
 .svc-b b{color:var(--b);font-size:18px;font-weight:900;margin-top:6px}
 .grid4 .glass h3{font-size:18px}
 #price{scroll-margin-top:72px}
+@media(max-width:760px){.pc.hot{transform:none;margin:14px 0}}
+@media (prefers-reduced-motion:reduce){.pc.hot,.pc.hot::after{animation:none}}
 /* services */
 .svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .svc-c{display:flex;flex-direction:column;gap:8px;padding:30px;border-radius:var(--r);background:#fff;color:var(--ink);text-decoration:none;box-shadow:0 12px 32px rgba(0,0,0,.25);transition:transform .2s ease,box-shadow .2s ease}
@@ -372,7 +379,7 @@ html.dyn .dyn-rev.dyn-in{opacity:1;transform:none}
   <div class="sec-head"><span class="eyebrow">가격표</span><h2>이게 끝이에요. 정액입니다</h2><p class="lead">아래 금액이 최종 결제 금액이에요. 장비 점검, 하자 보고서, 부가세까지 모두 포함입니다.</p></div>
   <div class="price-grid">
     <div class="card pc"><div class="nm">20평대 이하</div><div class="pr">149,000<small>원</small></div><div class="ds">전용 59㎡ 이하 세대</div><ul><li>장비 점검 포함</li><li>24시간 내 보고서</li><li>부가세 포함</li></ul><a class="btn btn-b" href="#apply">예약 문의</a></div>
-    <div class="card pc hot"><span class="tag">가장 많이 선택</span><div class="nm">30평대 (34평 기준)</div><div class="pr">199,000<small>원</small></div><div class="ds">전용 84㎡ 전후 세대</div><ul><li>장비 점검 포함</li><li>24시간 내 보고서</li><li>부가세 포함</li></ul><a class="btn btn-b" href="#apply">예약 문의</a></div>
+    <div class="card pc hot"><span class="tag">★ 가장 많이 선택</span><div class="nm">30평대 (34평 기준)</div><div class="pr">199,000<small>원</small></div><div class="ds">전용 84㎡ 전후 세대</div><ul><li>장비 점검 포함</li><li>24시간 내 보고서</li><li>부가세 포함</li></ul><a class="btn btn-b" href="#apply">예약 문의</a></div>
     <div class="card pc"><div class="nm">40평대 이상</div><div class="pr">259,000<small>원</small></div><div class="ds">대형 평형, 복층, 펜트하우스는 별도 견적</div><ul><li>장비 점검 포함</li><li>24시간 내 보고서</li><li>부가세 포함</li></ul><a class="btn btn-b" href="#apply">예약 문의</a></div>
   </div>
   <div class="price-note"><span>'공동구매가', '~원부터'에 속지 마세요. 계약 전에 최종 결제 금액을 꼭 확인하세요.</span><button type="button" data-open-popup>전국 최저가 보상제 자세히 보기</button></div>
